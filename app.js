@@ -1,7 +1,7 @@
 // Data produk (bisa diganti sesuai kebutuhan)
 const PRODUCTS = [
   {id: 'drs01', name: 'Aurora Satin Dress', price: 349000, image: 'assets/dress-1.svg'},
-  {id: 'top01', name: 'Luna Pleats Blouse', price: 199000, image: 'assets/top-1.svg'},
+  {id: 'top01', name: 'Luna Pleats Blouse', price: 199000, image: 'assets/top.png'},
   {id: 'skrt1', name: 'Serene Midi Skirt', price: 229000, image: 'assets/skirt-1.svg'},
   {id: 'set01', name: 'Azure Lounge Set', price: 289000, image: 'assets/set-1.svg'},
   {id: 'bag01', name: 'Copper Mini Bag', price: 259000, image: 'assets/bag-1.svg'},
