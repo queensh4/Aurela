@@ -1,4 +1,4 @@
-<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+<top.png width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0%" stop-color="#7EC8E3"/>
@@ -11,4 +11,4 @@
     <circle cx="120" cy="90" r="26" fill="#7EC8E3"/>
     <path d="M60 160 Q120 120 180 160" fill="none" stroke="#a15f2a" stroke-width="6" stroke-linecap="round"/>
   </g>
-</svg>
+</top.png>
