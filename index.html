@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Auréla — Toko Baju Perempuan Serba Ada</title>
+  <meta name="description" content="Auréla: toko baju perempuan serba ada. Fashion elegan & kekinian, by Queensha." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <span class="logo-icon" aria-hidden="true"></span>
+        <span class="brand-name">Auréla</span>
+      </div>
+      <nav class="menu">
+        <a href="#koleksi">Koleksi</a>
+        <a href="#best">Best Seller</a>
+        <a href="#tentang">Tentang</a>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Cari">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="cart-btn" id="openCart" aria-label="Buka keranjang">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 12.39A2 2 0 0 0 9.62 15h8.76a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero container">
+    <div class="hero-text">
+      <p class="eyebrow">by Queensha</p>
+      <h1>Tampil Anggun & Percaya Diri</h1>
+      <p class="sub">Koleksi lengkap busana perempuan — dari harian hingga elegan, semua ada di <strong>Auréla</strong>.</p>
+      <div class="cta">
+        <a href="#koleksi" class="btn primary">Belanja Sekarang</a>
+        <a href="#best" class="btn ghost">Lihat Best Seller</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="assets/hero-dress.svg" alt="Ilustrasi gaun trendi" class="floaty">
+    </div>
+  </section>
+
+  <section class="slider-wrap" id="best" aria-label="Slider produk terlaris">
+    <div class="container slider">
+      <button class="slide-nav prev" aria-label="Sebelumnya">‹</button>
+      <div class="slides" id="slides">
+        <!-- Slides will be injected by JS -->
+      </div>
+      <button class="slide-nav next" aria-label="Berikutnya">›</button>
+    </div>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+  </section>
+
+  <section class="container" id="koleksi">
+    <h2 class="section-title">Koleksi Terbaru</h2>
+    <div class="grid" id="productGrid">
+      <!-- Products injected by JS -->
+    </div>
+  </section>
+
+  <section class="container about" id="tentang">
+    <div class="about-card">
+      <h3>Tentang Auréla</h3>
+      <p>Kami percaya setiap perempuan berhak tampil mempesona tanpa kompromi. Pilih gaya kamu — minimalis, chic, atau glam — semua tersedia.</p>
+      <ul class="ticks">
+        <li>Bahan premium & nyaman</li>
+        <li>Ukuran lengkap XS–XXL</li>
+        <li>Pengiriman seluruh Indonesia</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container foot-inner">
+      <p>© 2025 Auréla. All rights reserved.</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram" class="icon-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="3.5"/></svg>
+        </a>
+        <a href="#" aria-label="TikTok" class="icon-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 8a5 5 0 1 1-5 5v8a5 5 0 0 0 5-5"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle" role="dialog">
+    <div class="cart-header">
+      <h3 id="cartTitle">Keranjang</h3>
+      <button id="closeCart" class="icon-btn" aria-label="Tutup keranjang">✕</button>
+    </div>
+    <div class="cart-body" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="total">
+        <span>Total</span>
+        <strong id="cartTotal">Rp0</strong>
+      </div>
+      <a href="checkout.html" class="btn primary wfull" id="checkoutBtn">Checkout</a>
+    </div>
+  </aside>
+
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

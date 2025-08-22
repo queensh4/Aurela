@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Auréla — Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="checkout-body">
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <span class="logo-icon"></span>
+        <span class="brand-name">Auréla</span>
+      </div>
+      <a href="index.html" class="btn ghost">Kembali ke Toko</a>
+    </div>
+  </header>
+
+  <main class="container checkout">
+    <h1>Checkout</h1>
+
+    <div class="progress">
+      <div class="progress-step active" data-step="1">Keranjang</div>
+      <div class="progress-step" data-step="2">Detail</div>
+      <div class="progress-step" data-step="3">Pembayaran</div>
+      <div class="progress-step" data-step="4">Selesai</div>
+    </div>
+
+    <div class="checkout-grid">
+      <section class="card">
+        <h2>Detail Pengiriman</h2>
+        <form id="shipForm" class="form">
+          <label>Nama Lengkap<input required name="name" placeholder="Nama penerima"></label>
+          <div class="row">
+            <label>Telepon<input required name="phone" placeholder="08xxxxxxxxxx"></label>
+            <label>Kode Pos<input required name="zip" placeholder="12345" pattern="\d{5}"></label>
+          </div>
+          <label>Alamat Lengkap<textarea required name="address" placeholder="Jalan, No, RT/RW, Kelurahan, Kecamatan"></textarea></label>
+          <label>Kota/Kabupaten<input required name="city" placeholder="Kota"></label>
+          <label>Catatan (opsional)<input name="note" placeholder="Opsional"></label>
+        </form>
+      </section>
+
+      <aside class="card order">
+        <h2>Ringkasan Pesanan</h2>
+        <div id="orderItems"></div>
+        <div class="split">
+          <span>Subtotal</span><strong id="orderSubtotal">Rp0</strong>
+        </div>
+        <div class="split">
+          <span>Ongkir</span><strong id="orderShip">Rp20.000</strong>
+        </div>
+        <div class="split total">
+          <span>Total</span><strong id="orderTotal">Rp0</strong>
+        </div>
+        <button id="toPayment" class="btn primary wfull">Lanjut ke Pembayaran</button>
+      </aside>
+    </div>
+
+    <section class="card payment hidden" id="paymentSection">
+      <h2>Pembayaran</h2>
+      <form id="payForm" class="form">
+        <label><input type="radio" name="pay" value="transfer" checked> Transfer Bank</label>
+        <label><input type="radio" name="pay" value="ewallet"> E-Wallet</label>
+        <label><input type="radio" name="pay" value="cod"> Bayar di Tempat (COD)</label>
+      </form>
+      <button id="placeOrder" class="btn primary">Buat Pesanan</button>
+    </section>
+
+    <section class="success hidden" id="successSection" aria-live="polite">
+      <div class="success-card">
+        <div class="checkmark">✓</div>
+        <h2>Pesanan Berhasil!</h2>
+        <p>Terima kasih sudah belanja di Auréla. Rincian pesanan telah dikirim ke email/nomor yang kamu masukkan.</p>
+        <a href="index.html" class="btn ghost">Kembali Beranda</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot-inner">
+      <p>© 2025 Auréla. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
